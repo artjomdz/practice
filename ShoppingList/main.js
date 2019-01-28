@@ -28,11 +28,13 @@ const mainFunc = () => {
 
   const crossOut = (event) => {
 
-    event.target.parentNode.nextSibling.className = 'cross';
-    if(!event.target.checked){
-      event.target.parentNode.nextSibling.className = ' ';
-      
-    }
+    // event.target.parentNode.nextSibling.className = 'cross';
+    // if(!event.target.checked){
+    //   event.target.parentNode.nextSibling.className = ' ';
+    // }
+
+    event.target.checked ? event.target.parentNode.nextSibling.className = 'cross' : 
+    event.target.parentNode.nextSibling.className = ' ';
     console.log(event.target.checked);
 
 
