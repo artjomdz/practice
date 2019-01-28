@@ -18,7 +18,7 @@ const mainFunc = () => {
   let createNewParagraph = document.createElement('li');
   createNewParagraph.style.listStyle = 'none';
   let checkbox = document.createElement('div');
-
+  checkbox.className = 'checked'
   checkbox.innerHTML = '<input type="checkbox" class="check"></input>';
   itemsToBuy.appendChild(checkbox);
   itemsToBuy.appendChild(createNewParagraph);
@@ -27,13 +27,16 @@ const mainFunc = () => {
   createNewParagraph.textContent = `${product.name} - ${product.amount}`;
 
   const crossOut = (event) => {
-    let selectText = event.target.parentNode.nextSibling;
-    // selectText.style.textDecoration = "line-through";
-    console.log(event.target)
-    selectText.classList.toggle('checked')
+      // selectText.style.textDecoration = "line-through";
+      if(event.target.className === "check") {
+          event.target.parentNode.previousSibling.classList.toggle('cross');
+          console.log(event.target.parentNode.nextSibling);
+    }
+    
+    
   };
 
-  let getCheck = document.querySelector('.check');
+  let getCheck = document.querySelector('.itemsToBuy');
   getCheck.addEventListener('click', crossOut)
 };
 
