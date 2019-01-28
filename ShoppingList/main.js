@@ -27,13 +27,15 @@ const mainFunc = () => {
   createNewParagraph.textContent = `${product.name} - ${product.amount}`;
 
   const crossOut = (event) => {
-      // selectText.style.textDecoration = "line-through";
-      if(event.target.className === "check") {
-          event.target.parentNode.previousSibling.classList.toggle('cross');
-          console.log(event.target.parentNode.nextSibling);
+
+    event.target.parentNode.nextSibling.className = 'cross';
+    if(!event.target.checked){
+      event.target.parentNode.nextSibling.className = ' ';
+      
     }
-    
-    
+    console.log(event.target.checked);
+
+
   };
 
   let getCheck = document.querySelector('.itemsToBuy');
