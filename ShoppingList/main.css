@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px
+}
+
+
+h1 {
+    text-align: center;
+    
+}
+
+.container {
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    margin: 15vh auto;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.manageList {
+    border: 2px grey solid;
+    background-color:white;
+    width: 40vh;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.manageList > h2 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.listSummary {
+    border: 2px grey solid;
+    background-color: white;
+    width: 40vh;
+    margin-left: 1em;
+}
+
+.listSummary > h2 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+form {
+    margin: 3em 2em 0 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.enterText, .enterAmount {
+    margin-bottom: 1em;
+}
