@@ -2,32 +2,39 @@ const groceryList = [];
 let submitValue = document.querySelector('.submit');
 let getText = document.querySelector('.enterText');
 let getAmount = document.querySelector('.enterAmount');
-let getCheck = document.querySelector('.check');
 
 const mainFunc = () => {
 
-    const newProduct = (a,b) => {
-        const grocertListObj = {
-            name: a,
-            amount: b
-        }
-        groceryList.push(grocertListObj);
-    };
+  const newProduct = (a, b) => {
+    const grocertListObj = {
+      name: a,
+      amount: b
+    }
+    groceryList.push(grocertListObj);
+  };
 
-    newProduct(getText.value, getAmount.value);
-    let itemsToBuy = document.querySelector('.itemsToBuy');
-    let createNewParagraph = document.createElement('li');
-    createNewParagraph.style.listStyle = 'none';
-    let checkbox = document.createElement('div');
+  newProduct(getText.value, getAmount.value);
+  let itemsToBuy = document.querySelector('.itemsToBuy');
+  let createNewParagraph = document.createElement('li');
+  createNewParagraph.style.listStyle = 'none';
+  let checkbox = document.createElement('div');
 
-    checkbox.innerHTML = '<input type="checkbox" class="check"></input>';
-    itemsToBuy.appendChild(checkbox);
-    itemsToBuy.appendChild(createNewParagraph);
+  checkbox.innerHTML = '<input type="checkbox" class="check"></input>';
+  itemsToBuy.appendChild(checkbox);
+  itemsToBuy.appendChild(createNewParagraph);
 
-    let product = groceryList[groceryList.length-1];
-    createNewParagraph.textContent = `${product.name} - ${product.amount} pc`;
-   
+  let product = groceryList[groceryList.length - 1];
+  createNewParagraph.textContent = `${product.name} - ${product.amount}`;
+
+  const crossOut = (event) => {
+    let selectText = event.target.parentNode.nextSibling;
+    // selectText.style.textDecoration = "line-through";
+    console.log(event.target)
+    selectText.classList.toggle('checked')
+  };
+
+  let getCheck = document.querySelector('.check');
+  getCheck.addEventListener('click', crossOut)
 };
 
-// getCheck.addEventListener('click')
 submitValue.addEventListener('click', mainFunc);

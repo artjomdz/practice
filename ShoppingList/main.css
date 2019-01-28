@@ -5,10 +5,15 @@
     font-size: 18px
 }
 
+.checked {
+    text-decoration: line-through;
+}
+
+
 
 h1 {
     text-align: center;
-    
+
 }
 
 .container {
@@ -18,19 +23,19 @@ h1 {
     margin: 15vh auto;
     justify-content: center;
     flex-direction: row;
-    
+
 }
 
 .manageList {
     border: 2px grey solid;
-    background-color:white;
+    background-color: white;
     width: 40vh;
     margin-right: 1em;
     display: flex;
     flex-direction: column;
 }
 
-.manageList > h2 {
+.manageList>h2 {
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
@@ -43,7 +48,7 @@ h1 {
     margin-left: 1em;
 }
 
-.listSummary > h2 {
+.listSummary>h2 {
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
@@ -56,6 +61,7 @@ form {
     flex-direction: column;
 }
 
-.enterText, .enterAmount {
+.enterText,
+.enterAmount {
     margin-bottom: 1em;
 }
