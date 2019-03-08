@@ -5,7 +5,7 @@ let procent = document.querySelector('#service');
 let selectDiv = document.querySelector('.result');
 let createDiv = document.createElement('p');
 let currentProcent = "";
-
+console.log(bill);
 procent[0].value = 30;
 procent[1].value = 25;
 procent[2].value = 20;
